@@ -70,7 +70,6 @@ const generateFreelancer = () => {
 
   //update average price message
   updateAverage(freelancerPrices);
-
 }
 
 //function for initializing list with our two starting freelancers:
