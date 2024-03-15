@@ -5,7 +5,7 @@ const occupations = ["Teacher", "Engineer", "Tutor", "Carpenter", "Scientist", "
 const prices = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200];
 
 //Elements to Grab
-const message = document.querySelector("#message");
+const averageMessage = document.querySelector("#message");
 const table = document.querySelector("table");
 
 
@@ -26,7 +26,7 @@ const updateAverage = (flPrices) => {
 }
 const updateMessage = (avg) => {
   const fixedAvg = avg.toFixed(2)
-  message.innerText = `Average Freelancer Price: ${fixedAvg}$/hr`
+  averageMessage.innerText = `Average Freelancer Price: ${fixedAvg}$/hr`
 }
 
 //freelancer array
