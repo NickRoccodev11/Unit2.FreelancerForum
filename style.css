@@ -47,3 +47,7 @@ table {
   background-color: rgb(153, 175, 195);
   color: rgb(110, 34, 34);
 }
+.highlighted{
+  background-color: rgb(177, 63, 63);
+  color: rgb(197, 215, 231);
+}

@@ -8,6 +8,15 @@ const prices = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150
 const message = document.querySelector("#message");
 const table = document.querySelector("table");
 
+
+//functions for highlighting a hovered row:
+const highlightRow = (row) => {
+  row.classList.add("highlighted")
+}
+const removeHighlight = (row) => {
+  row.classList.remove("highlighted")
+}
+
 //array and functions for updating average freelancer price:
 const freelancerPrices = [];
 const updateAverage = (flPrices) => {
@@ -62,11 +71,19 @@ const generateFreelancer = () => {
   const priceData = document.createElement("td");
   priceData.innerText = `${freelancers[freelancers.length - 1].price} $`;
 
-  //append them to each other and then to the table
+  //append the data to the row, and then to the table
   row.appendChild(nameData);
   row.appendChild(jobData);
   row.appendChild(priceData);
   table.appendChild(row)
+
+  //eventlisteners for calling the highlighting functions:
+  row.addEventListener("mouseover", () => {
+    highlightRow(row);
+  });
+  row.addEventListener("mouseout", () => {
+    removeHighlight(row);
+  });
 
   //update average price message
   updateAverage(freelancerPrices);
@@ -88,10 +105,16 @@ const initializeList = (flList) => {
     table.appendChild(row);
     freelancerPrices.push(freelancer.price)
     updateAverage(freelancerPrices);
+    row.addEventListener("mouseover", () => {
+      highlightRow(row);
+    });
+    row.addEventListener("mouseout", () => {
+      removeHighlight(row);
+    });
   });
 }
 
 //initialize and start adding to the list:
 initializeList(freelancers)
-setInterval(generateFreelancer, 4000);
+setInterval(generateFreelancer, 3000);
 
