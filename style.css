@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(42, 82, 117);
+  color: rgb(179, 217, 228);
+}
+
+h1 {
+  margin: 40px;
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+  color: rgb(188, 68, 68);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px 0px 50px 0px;
+}
+
+#freelancer-list {
+  background-color: rgb(95, 115, 132);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 100px 0px 100px;
+  padding: 50px;
+}
+
+th {
+  font-size: 1.2rem;
+}
+
+td {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+th {
+  border: 1px solid;
+  padding: 10px;
+  background-color: rgb(83, 101, 118);
+  color: rgb(178, 196, 211);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 40px;
+  border: 2px solid black;
+  background-color: rgb(153, 175, 195);
+  color: rgb(110, 34, 34);
+}
