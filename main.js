@@ -78,12 +78,8 @@ const generateFreelancer = () => {
   table.appendChild(row)
 
   //eventlisteners for calling the highlighting functions:
-  row.addEventListener("mouseover", () => {
-    highlightRow(row);
-  });
-  row.addEventListener("mouseout", () => {
-    removeHighlight(row);
-  });
+  row.addEventListener("mouseover", () => highlightRow(row));
+  row.addEventListener("mouseout", () => removeHighlight(row));
 
   //update average price message
   updateAverage(freelancerPrices);
@@ -105,12 +101,8 @@ const initializeList = (flList) => {
     table.appendChild(row);
     freelancerPrices.push(freelancer.price)
     updateAverage(freelancerPrices);
-    row.addEventListener("mouseover", () => {
-      highlightRow(row);
-    });
-    row.addEventListener("mouseout", () => {
-      removeHighlight(row);
-    });
+    row.addEventListener("mouseover", () => highlightRow(row));
+    row.addEventListener("mouseout", () => removeHighlight(row));
   });
 }
 
