@@ -83,6 +83,11 @@ const generateFreelancer = () => {
 
   //update average price message
   updateAverage(freelancerPrices);
+  
+  //stop making new entries after 50 have been made
+  if (freelancers.length >= 50) {
+    clearInterval(listings)
+  }
 }
 
 //function for initializing list with our two starting freelancers:
@@ -108,5 +113,5 @@ const initializeList = (flList) => {
 
 //initialize and start adding to the list:
 initializeList(freelancers)
-setInterval(generateFreelancer, 3000);
+const listings = setInterval(generateFreelancer, 2000);
 
